@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL Query Compiler</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>SQL Query Compiler</h1>
+    
+    <textarea id="queryInput" placeholder="Enter your SQL query here..."></textarea>
+    
+    <div class="button-row">
+      <button onclick="runQuery()">Run Query</button>
+      <button onclick="exportCSV()">Export CSV</button>
+      <button onclick="getSuggestion()">AI Suggest</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <div id="loader" class="spinner hidden"></div>
+
+    <pre id="suggestionBox"></pre>
+    <div id="output"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

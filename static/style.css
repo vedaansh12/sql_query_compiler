@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --box-bg: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --box-bg: #2c2c2c;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.container {
+  background: var(--box-bg);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.button-row {
+  margin-top: 10px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+#suggestionBox {
+  background-color: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+/* Spinner */
+.spinner {
+  margin: 20px auto;
+  border: 4px solid #ccc;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
